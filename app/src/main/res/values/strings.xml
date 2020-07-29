@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="location">Perm</string>
+    <string name="maidDegree">21°</string>
+    <string name="time">Night</string>
+    <string name="timeMorning">Morning</string>
+    <string name="timeDay">Day</string>
+    <string name="timeEvening">Evening</string>
+    <string name="enter_location">Enter location</string>
+    <string name="myLocation">Location</string>
+
+</resources>
