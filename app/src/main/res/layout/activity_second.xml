@@ -31,22 +31,4 @@
         android:hint="@string/enter_location"
         tools:ignore="Autofill,TextFields" />
 
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/radiogroup"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <RadioButton
-            android:id="@+id/radiobtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/my_city" />
-
-        <RadioButton
-            android:id="@+id/radiobtn2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/otherCity" />
-    </com.google.android.material.chip.ChipGroup>
-
 </LinearLayout>

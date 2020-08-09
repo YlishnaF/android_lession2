@@ -8,5 +8,11 @@
     <string name="timeEvening">Evening</string>
     <string name="enter_location">Enter location</string>
     <string name="myLocation">Location</string>
+    <string name="make_it_home_location">make it home location</string>
+    <string name="home">Home</string>
+    <string name="other_city">Other city</string>
+    <string name="otherCity">Other city</string>
+    <string name="my_city">Home</string>
+
 
 </resources>
