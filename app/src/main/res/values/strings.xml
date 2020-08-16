@@ -13,6 +13,7 @@
     <string name="other_city">Other city</string>
     <string name="otherCity">Other city</string>
     <string name="my_city">Home</string>
+    <string name="change_lct">Change location</string>
 
 
 </resources>

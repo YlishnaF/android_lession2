@@ -3,6 +3,9 @@ package com.example.myapplication;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,7 +15,13 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class MainActivity extends AppCompatActivity {
+    private RecyclerView recyclerView;
+    private RecyclerDataAdapter adapter;
+    private ArrayList<String> listData = new ArrayList<>(Arrays.asList("Night", "Morning", "Day", "Evening", "15°", "18°", "23°", "19°"));
     final static int requestCode = 1;
     private TextView textView;
     private Button changeLctBtn;
@@ -24,9 +33,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViews();
-
         changeLocation();
+        setupRecyclerView();
 
+    }
+
+    private void setupRecyclerView() {
+        LinearLayoutManager layoutManager = new GridLayoutManager(getBaseContext(), 4);
+        adapter = new RecyclerDataAdapter(listData);
+
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(adapter);
     }
 
     private void changeLocation() {
@@ -43,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
     private void findViews(){
         changeLctBtn = findViewById(R.id.changeLctBtn);
         textView = findViewById(R.id.location);
+        recyclerView = findViewById(R.id.recyclerView);
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
